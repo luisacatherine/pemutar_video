@@ -26,9 +26,9 @@
                     <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/tranding.png' %}" />Tranding</a>
                     <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/library.png' %}" />Library</a>
                     <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/history.png' %}" />History</a><br>
-                    <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/signin.png' %}" />Sign Up</a>
-                    <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/login.png' %}" />Log In</a>
-                    <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/logout.png' %}" />Log Out</a><br>
+                    <a href="{% url 'signup' %}" style="text-decoration:none"><img class="icon" src="{% static 'images/signin.png' %}" />Sign Up</a>
+                    <a href="{% url 'login' %}" style="text-decoration:none"><img class="icon" src="{% static 'images/login.png' %}" />Log In</a>
+                    <a href="{% url 'logout' %}" style="text-decoration:none"><img class="icon" src="{% static 'images/logout.png' %}" />Log Out</a><br>
                     <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/help.png' %}" />Help</a>
 
                 </div>
