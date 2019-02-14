@@ -1,0 +1,41 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="section-product"> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-sm-12 col-12">
+                <div class="produknya">
+                    <div class="column-product">
+                        <div class="column-middle">
+                            <div class="video_detail">
+                                <video controls>
+                                    <source src='{{ videos.videofile.url }}' type='video/mp4'>
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <p class="judul-video-detail">{{ videos.judul }}</p>
+                    <p>{{ videos.deskripsi_video }}</p>
+                </div> 
+            </div>
+            <div class="col-md-2">
+                <h3>Lihat Video Lainnya</h3>
+                {% for data in video_lain %}
+                <div class="video_home">
+                    <video controls>
+                        <source src='{{ data.videofile.url }}' type='video/mp4'>
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>{{ data.judul }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>    
+{% endblock %}

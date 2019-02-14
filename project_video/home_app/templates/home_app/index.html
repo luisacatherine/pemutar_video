@@ -2,4 +2,31 @@
 {% load static %}
 
 {% block content %}
+<div class="section-product"> 
+    <div class="container-fluid">
+        <div class="row">
+            <a class="btn btn-secondary btn-lg btn-block" href="{% url 'input_post' %}" role="button">New Product</a><br>
+            {% for data in videos %}
+            <div class="col-md-2 col-sm-4 col-6">
+                <div class="produknya">
+                    <div class="column-product">
+                        <div class="column-middle">
+                            <div class="video_home">
+                                <video controls>
+                                    <source src='{{ data.videofile.url }}' type='video/mp4'>
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <p class="judul-video-home">{{ data.judul|truncatechars:30 }}</p>
+                        <a href="{% url 'post_detail' post_id=data.id %}">Lihat Details</a>
+                    </div>
+                </div>  
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>    
 {% endblock %}
