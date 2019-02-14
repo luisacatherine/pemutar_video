@@ -23,8 +23,8 @@
                 </div> 
             </div>
             <div class="col-md-2 col-sm-4 col-12">
-                {% for data in video_lain %}
                 <h3>Lihat Video Lainnya</h3>
+                {% for data in video_lain %}
                 <div class="video_home">
                     <video controls>
                         <source src='{{ data.videofile.url }}' type='video/mp4'>
