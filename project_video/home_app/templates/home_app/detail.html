@@ -22,14 +22,14 @@
                     <p>{{ videos.deskripsi_video }}</p>
                 </div> 
             </div>
-            <div class="col-md-2 col-sm-4 col-12">
-                <h3>Lihat Video Lainnya</h3>
+            <div class="col-md-2 col-sm-12 col-12">
+                <p class="judul-video-detail">Lihat Video Lainnya</p>
                 {% for data in video_lain %}
                 <div class="video_home">
                     <video controls>
                         <source src='{{ data.videofile.url }}' type='video/mp4'>
                     </video>
-                    <a class="link-lain" href="{% url 'post_detail' post_id=data.id %}">{{ data.judul }}</a>
+                    <a class="link-lain" href="{% url 'post_detail' post_id=data.id %}">{{ data.judul }}</a> <br> <br>
                 </div>
                 {% endfor %}
             </div>
