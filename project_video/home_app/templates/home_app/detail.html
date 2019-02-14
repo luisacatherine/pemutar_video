@@ -18,7 +18,14 @@
                     </div>
                 </div>
                 <div class="product-details">
-                    <p class="judul-video-detail">{{ videos.judul }}</p>
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-8">
+                            <p class="judul-video-detail">{{ videos.judul }}</p>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-4 text-right">
+                            <p>posted by: {{ videos.posted_by }}</p>
+                        </div>
+                    </div>
                     <p>{{ videos.deskripsi_video }}</p>
                 </div> 
             </div>

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import VideoClass
 from .forms import PostForm
 from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 
 # Create your views here.
 def home_app(request):
@@ -14,7 +15,7 @@ def input_post(request):
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
-            post.author = request.user
+            post.posted_by = request.user
             post.save()
             return redirect('home_app')
     else:
@@ -27,11 +28,9 @@ def post_detail(request, post_id):
     video_all = video_all.order_by('-update_at')
     return render(request, 'home_app/detail.html', {'videos': post_num, 'video_lain': video_all})
 
-# def search(request):        
-#     if request.method == 'GET': # this will be GET now      
-#         book_name =  request.GET.get('search') # do some research what it does       
-#         try:
-#             status = Add_prod.objects.filter(bookname__icontains=book_name) # filter returns a list so you might consider skip except part
-#         return render(request,"search.html",{"books":status})
-#     else:
-#         return render(request,"search.html",{})
+def search(request):
+    queryset_list = VideoClass.objects.all()
+    query = request.GET.get("q")
+    if query:
+        queryset_list = queryset_list.filter(judul__icontains=query)
+    return render(request, 'home_app/search.html', {'videos': queryset_list})
