@@ -1,5 +1,26 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import VideoClass
+from .forms import PostForm
 
 # Create your views here.
 def home_app(request):
-    return render(request, 'home_app/index.html', {})
+    video_all = VideoClass.objects.all().order_by('-update_at')
+    return render(request, 'home_app/index.html', {'videos': video_all})
+
+def input_post(request):
+    if request.method == "POST":
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.save()
+            return redirect('home_app')
+    else:
+        form = PostForm()
+    return render(request, 'home_app/post_new.html', {'form': form})
+
+def post_detail(request, post_id):
+    post_num = get_object_or_404(VideoClass, id=post_id)
+    video_all = VideoClass.objects.exclude(id=post_id)
+    video_all = video_all.order_by('-update_at')
+    return render(request, 'home_app/detail.html', {'videos': post_num, 'video_lain': video_all})
