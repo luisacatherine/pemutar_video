@@ -29,7 +29,7 @@
                     <video controls>
                         <source src='{{ data.videofile.url }}' type='video/mp4'>
                     </video>
-                    <a class="link-lain" href="{% url 'post_detail' post_id=data.id %}">{{ data.judul }} test</a>
+                    <a class="link-lain" href="{% url 'post_detail' post_id=data.id %}">{{ data.judul }}</a>
                 </div>
                 {% endfor %}
             </div>
