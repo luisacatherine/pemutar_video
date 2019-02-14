@@ -1,4 +1,5 @@
 env_video/
+env_pemutar_video/
 
 # Created by https://www.gitignore.io/api/django,python
 # Edit at https://www.gitignore.io/?templates=django,python

@@ -17,20 +17,24 @@
     </head>
     <body>
         <header>
-            <!-- <div>
-                123
-            </div> -->
+
             <div>
                 <div class="navtop">
                 
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href=""><img class="icon" src="static/images/home.png" />Home</a>
-                    <a href="#"><img class="icon" src="static/images/tranding.png" />Tranding</a>
-                    <a href="#"><img class="icon" src="static/images/library.png" />Librari</a>
-                    <a href="#"><img class="icon" src="static/images/history.png" />History</a>
+
+                    <a href="{% url 'home_app' %}"><img class="icon" src="{% static 'images/home.png' %}" />Home</a>
+                    <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/tranding.png' %}" />Tranding</a>
+                    <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/library.png' %}" />Library</a>
+                    <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/history.png' %}" />History</a><br>
+                    <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/signin.png' %}" />Sign Up</a>
+                    <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/login.png' %}" />Log In</a>
+                    <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/logout.png' %}" />Log Out</a><br>
+                    <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/help.png' %}" />Help</a>
+
                 </div>
-                    <span class = "navbuton" style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                    <span class = "navbuton" style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
                     <script>
                         function openNav() {
@@ -45,9 +49,13 @@
                         document.body.style.backgroundColor = "white";
                         }
                     </script>
-                    <span class="youtube"><img class="youtubeicon" src="static/images/youtube.png" /><strong>YouTube</strong></span>
+
+                    <a href="{% url 'home_app' %}">
+                        <span class="link-lain font25"><img class="youtubeicon" src="{% static 'images/youtube.png' %}" /><strong>YouTube</strong></span>
+                    </a>
+
                     <dev class ="search">
-                      <form class="navbar-form navbar-right" action="/action_page.php">
+                      <form class="navbar-form navbar-right" id="searchform" action="{{ request.get_host }}">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="Search" name="search">
                           <div class="input-group-btn">
@@ -64,6 +72,8 @@
         {% block content %}
         {% endblock %}
         <footer>
-            tes
+            <span class ="footerfont">
+                <strong>Copyright @ YouTube 2019</strong>
+            </span>
         </footer>
 </html>
