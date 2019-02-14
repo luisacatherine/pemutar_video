@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import VideoClass
 from .forms import PostForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def home_app(request):
     video_all = VideoClass.objects.all().order_by('-update_at')
     return render(request, 'home_app/index.html', {'videos': video_all})
 
+@login_required
 def input_post(request):
     if request.method == "POST":
         form = PostForm(request.POST, request.FILES)
