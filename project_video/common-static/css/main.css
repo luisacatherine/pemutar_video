@@ -30,7 +30,7 @@ body, p {
   left: 0;
   background-color: GhostWhite ; 
   overflow-x: hidden; 
-  margin-top: 63px;
+  margin-top: 56px;
   padding-top: 10px; 
   transition: 0.75s; 
 }
@@ -76,15 +76,7 @@ body, p {
 
 footer{
   background-color: black;
-  padding: 15px;
-  margin:0 auto;
-  display: table;
-}
-
-.footerfont{
-  color: white;
-  margin:0 auto;
-  display: table;
+  padding: 5px;
 }
 .youtubeicon{
   width: 35px;
@@ -98,7 +90,6 @@ footer{
 }
 .search{
   float: right;
-  margin: 0px;
 }
 
 #buttonsearch{
@@ -143,6 +134,13 @@ footer{
     max-width: 100%;
 }
 
+.video_home video {
+    min-width: 100px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
 .section-product .column-product .column-middle .video_detail video {
     min-width: 100px;
     max-width: 1600px;
@@ -168,6 +166,7 @@ footer{
 
 .font25{
     font-size: 25px;
+    text-decoration: none;
 }
 
 .link-lain:hover {
@@ -176,4 +175,5 @@ footer{
 
 .font25:hover {
     color: black;
+    text-decoration: none!important;
 }
