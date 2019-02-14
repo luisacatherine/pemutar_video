@@ -17,18 +17,16 @@
     </head>
     <body>
         <header>
-            <!-- <div>
-                123
-            </div> -->
+
             <div>
                 <div class="navtop">
                 
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href=""><img class="icon" src="static/images/home.png" />Home</a>
-                    <a href="#"><img class="icon" src="static/images/tranding.png" />Tranding</a>
-                    <a href="#"><img class="icon" src="static/images/library.png" />Librari</a>
-                    <a href="#"><img class="icon" src="static/images/history.png" />History</a>
+                    <a href="{% url 'home_app' %}"><img class="icon" src="{% static 'images/home.png' %}" />Home</a>
+                    <a href="#"><img class="icon" src="{% static 'images/tranding.png' %}" />Tranding</a>
+                    <a href="#"><img class="icon" src="{% static 'images/library.png' %}" />Librari</a>
+                    <a href="#"><img class="icon" src="{% static 'images/history.png' %}" />History</a>
                 </div>
                     <span class = "navbuton" style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
@@ -45,7 +43,9 @@
                         document.body.style.backgroundColor = "white";
                         }
                     </script>
-                    <span class="youtube"><img class="youtubeicon" src="static/images/youtube.png" /><strong>YouTube</strong></span>
+                    <a href="{% url 'home_app' %}">
+                        <span class="link-lain font25"><img class="youtubeicon" src="{% static 'images/youtube.png' %}" /><strong>YouTube</strong></span>
+                    </a>
                     <dev class ="search">
                       <form class="navbar-form navbar-right" action="/action_page.php">
                         <div class="input-group">
