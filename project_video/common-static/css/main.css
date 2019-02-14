@@ -1,6 +1,90 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700');
 
+.navbar{
+  margin: 5px;
+  color: aqua;
+  background-color:  GhostWhite;
+}
+
+.navbuton{
+  color:black;
+}
+.sidenav {
+  height: 100%; 
+  width: 0; 
+  position: fixed;
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: GhostWhite ; 
+  overflow-x: hidden; 
+  margin-top: 56px;
+  padding-top: 10px; 
+  transition: 0.75s; 
+}
+.navtop{
+  background-color: #FE0505;
+  padding: 14px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 22px;
+  text-decoration: none;
+  font-size: 17px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+.icon{
+    width: 20px;
+    margin: 5px;
+}
+   
+.sidenav a:hover {
+  color: #FE0505;
+}
+  
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+  
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+  
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+footer{
+  background-color: black;
+  padding: 5px;
+}
+.youtubeicon{
+  width: 35px;
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-bottom: 0px;
+  margin-top: opx;
+}
+.youtube{
+  font-size: 25px;
+}
+.search{
+  float: right;
+}
+
+#buttonsearch{
+  height: 34px;
+}
+
 body, p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
