@@ -22,4 +22,5 @@ def input_post(request):
 def post_detail(request, post_id):
     post_num = get_object_or_404(VideoClass, id=post_id)
     video_all = VideoClass.objects.exclude(id=post_id)
+    video_all = video_all.order_by('-update_at')
     return render(request, 'home_app/detail.html', {'videos': post_num, 'video_lain': video_all})

@@ -12,7 +12,6 @@
                             <div class="video_detail">
                                 <video controls>
                                     <source src='{{ videos.videofile.url }}' type='video/mp4'>
-                                    Your browser does not support the video tag.
                                 </video>
                             </div>
                         </div>
@@ -23,15 +22,14 @@
                     <p>{{ videos.deskripsi_video }}</p>
                 </div> 
             </div>
-            <div class="col-md-2">
-                <h3>Lihat Video Lainnya</h3>
+            <div class="col-md-2 col-sm-4 col-12">
                 {% for data in video_lain %}
+                <h3>Lihat Video Lainnya</h3>
                 <div class="video_home">
                     <video controls>
                         <source src='{{ data.videofile.url }}' type='video/mp4'>
-                        Your browser does not support the video tag.
                     </video>
-                    <p>{{ data.judul }}</p>
+                    <a class="link-lain" href="{% url 'post_detail' post_id=data.id %}">{{ data.judul }}</a>
                 </div>
                 {% endfor %}
             </div>
