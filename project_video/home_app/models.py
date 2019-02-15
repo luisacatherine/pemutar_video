@@ -14,5 +14,6 @@ class VideoClass(models.Model):
     videofile = models.FileField(upload_to='videos', null=True, verbose_name="")
     update_at = models.DateTimeField(auto_now=True)
     deskripsi_video = models.TextField()
+    posted_by = models.CharField(max_length=100)
     def __str__(self):
         return self.judul

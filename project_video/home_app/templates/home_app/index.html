@@ -5,10 +5,7 @@
 
 <div class="section-product"> 
     <div class="container-fluid">
-        <h1>Welcome, {% if user.is_authenticated %}{{ user.username }}{% else %}visitor{% endif %}! </h1>
-        {% if user.is_authenticated %}
-        <a class="btn btn-secondary btn-lg btn-block" href="{% url 'input_post' %}" role="button">New Product</a>
-        {% endif %}
+        <p class="section-header">Welcome, {% if user.is_authenticated %}{{ user.username }}{% else %}visitor{% endif %}! </p>
         <div class="row">
             {% for data in videos %}
             <div class="col-md-2 col-sm-4 col-6">
@@ -25,6 +22,7 @@
                     </div>
                     <div class="product-details">
                         <a class="link-lain" href="{% url 'post_detail' post_id=data.id %}">{{ data.judul|truncatechars:30 }}</a><br>
+                        <a class="link-nama" href="{% url 'profile_umum' username=data.posted_by %}">posted by: {{ data.posted_by }}</a><br>
                         <a href="{% url 'post_detail' post_id=data.id %}">Lihat Details</a>
                     </div>
                 </div>  
