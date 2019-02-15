@@ -25,14 +25,14 @@ body, p {
   z-index: 1; 
   top: 0; 
   left: 0;
-  background-color: GhostWhite ; 
+  background-color: WhiteSmoke ; 
   overflow-x: hidden; 
   margin-top: 56px;
   padding-top: 10px; 
   transition: 0.75s; 
 }
 .navtop{
-  background-color: #FE0505;
+  background-color: WhiteSmoke;
   padding: 14px;
 }
 
@@ -40,7 +40,8 @@ body, p {
   padding: 8px 8px 8px 22px;
   text-decoration: none;
   font-size: 17px;
-  color: black;
+  font-family: 'Open Sans';
+  color:  #19345E;
   display: block;
   transition: 0.3s;
 }
@@ -50,7 +51,7 @@ body, p {
 }
    
 .sidenav a:hover {
-  color: #FE0505;
+  color: #F47522;
 }
   
 .sidenav .closebtn {
@@ -72,13 +73,14 @@ body, p {
 }
 
 footer{
-  background-color: black;
-  padding: 5px;
+  background-color: #19345E;
   margin-top: 50px;
+  margin-bottom: 0;
+  padding-top:2px;
   width:100%;
-  position: fixed;
   bottom: 0;
-  z-index: 10;
+  position: fixed;
+  z-index:10;
 }
 
 .footerfont{
@@ -122,8 +124,17 @@ footer{
 .judul-video-detail {
     font-family: 'Roboto';
     font-weight: bold;
+    color:#19345E;
     font-size: 24px;
 }
+
+.judul-video-lain {
+    font-family: 'Roboto';
+    font-weight: bold;
+    color:#19345E;
+    font-size: 16px;
+}
+
 #AboutAlpha{
     padding-top: 15px;
     padding-left: 50px;
@@ -152,11 +163,11 @@ footer{
     margin-left: 75px;
 }
 .section-product{
-    padding: 100px 0 100px 0;
+    padding: 100px 0 150px 0;
 }
 
 .section-list{
-    padding: 20px 0 0 0;
+    padding: 20px 0 150px 0;
 }
 
 .produknya{
@@ -203,7 +214,7 @@ iframe{
 
 .section-product .column-product .column-middle .video_detail video {
     min-width: 100px;
-    max-width: 1600px;
+    max-width: 800px;
     width: 100%;
     height: auto;
 }
@@ -220,8 +231,9 @@ iframe{
 .link-lain{
     font-family: 'Roboto';
     font-weight: bold;
-    font-size: 16px;
-    color: black;
+    font-size: 14px;
+    color: #19345E;
+    text-decoration: None;
 }
 
 .link-nama{
@@ -240,17 +252,19 @@ iframe{
 }
 
 .link-lain:hover {
-    color: red;
+    color: #F47522;
+    text-decoration: None;
 }
 
 .font25:hover {
-    color: black;
+    color: #19345E;
     text-decoration: none!important;
 }
 
 .section-header {
     font-family: Roboto;
     font-weight: bold;
+    color: #19345E;
     font-size: 20pt;
     text-align: center;
 }
@@ -271,3 +285,66 @@ hr {
     background-color:black;
     height: 1px;
   }
+
+.navbar-light .navbar-brand {
+    color:#19345E;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    color: #19345E;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #19345E;
+}
+
+.header{
+    box-shadow: 0 3px 6px RGBA(0,0,0,.16);
+}
+
+.navbar-brand{
+    float: left;
+    height: 50px;
+    padding: 0 10px !important;
+    font-size: 18px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.judul-app{
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: bold;
+    color:  #19345E;
+    text-decoration: None;
+}
+
+.judul-app:hover{
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: bold;
+    color:  #F47522;
+    text-decoration: None;
+}
+
+.med-sos {
+    font-family: 'Open Sans';
+    font-size: 12px;
+    color:#F7F7F7;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.medsos-table {
+    margin: auto;
+    padding: 5px;
+    border-spacing: 50px;
+}
+
+#follow-us {
+    font-family: 'Open Sans';
+    font-size: 17px;
+    color: white;
+    font-weight: 700;
+}

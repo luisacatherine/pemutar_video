@@ -22,7 +22,7 @@
                     </div>
                     <div class="product-details">
                         <a class="link-lain" href="{% url 'post_detail' post_id=data.id %}">{{ data.judul|truncatechars:30 }}</a><br>
-                        <a class="link-nama" href="{% url 'profile_umum' username=data.posted_by %}">posted by: {{ data.posted_by }}</a><br>
+                        <a class="link-nama" href="{% url 'profile_umum' username=data.posted_by %}">{{ data.posted_by }} - {{ data.update_at.date }}</a><br>
                         <a href="{% url 'post_detail' post_id=data.id %}">Lihat Details</a>
                     </div>
                 </div>  
