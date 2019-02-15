@@ -21,3 +21,10 @@ def profile(request):
     query = request.user.username
     querylist = querylist.filter(posted_by__contains=query)
     return render(request, 'signup/profile.html', {'user': user_now, 'videos': querylist})
+
+def profile_umum(request, username):
+    user = User.objects.get(username=username)
+    querylist = VideoClass.objects.all()
+    query = username
+    querylist = querylist.filter(posted_by__contains=query)
+    return render(request, 'signup/profile_umum.html', {'videos': querylist, 'user': user})

@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700');
 
+.navbar {
+    position: fixed!important;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
 body, p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -10,16 +17,6 @@ body, p {
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto'!important;
     font-weight: bold;
-}
-
-.navbar{
-  margin: 5px;
-  color: aqua;
-  background-color:  GhostWhite;
-}
-
-.navbuton{
-  color:black;
 }
 .sidenav {
   height: 100%; 
@@ -77,6 +74,11 @@ body, p {
 footer{
   background-color: black;
   padding: 5px;
+  margin-top: 50px;
+  width:100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
 }
 
 .footerfont{
@@ -115,7 +117,7 @@ footer{
 }
 
 .section-product{
-    padding: 80px 0 0 0;
+    padding: 100px 0 100px 0;
 }
 
 .section-list{
@@ -179,6 +181,16 @@ footer{
     color: black;
 }
 
+.link-nama{
+    font-family: 'Open Sans';
+    font-size: 14px;
+    color: gray;
+}
+
+.link-nama:hover{
+    color:gray
+}
+
 .font25{
     font-size: 25px;
     text-decoration: none;
@@ -204,7 +216,8 @@ footer{
     font-family: Roboto;
     font-weight: bold;
     font-size: 16pt;
-    text-align: center;  
+    text-align: center;
+    padding-top: 100px;
 }
 
 hr {

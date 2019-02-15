@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<p class="section-header">Your search result(s):</p>
+<p class="section-sub"> {{ user.username }} video(s):</p>
 <div class="section-list">
     <div class="container">
         {% for data in videos %}
