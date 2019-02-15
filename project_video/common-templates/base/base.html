@@ -29,6 +29,7 @@
                     <a href="{% url 'signup' %}" style="text-decoration:none"><img class="icon" src="{% static 'images/signin.png' %}" />Sign Up</a>
                     <a href="{% url 'login' %}" style="text-decoration:none"><img class="icon" src="{% static 'images/login.png' %}" />Log In</a>
                     <a href="{% url 'logout' %}" style="text-decoration:none"><img class="icon" src="{% static 'images/logout.png' %}" />Log Out</a><br>
+                    <a href="{% url 'about_us' %}" style="text-decoration:none"><img class="icon" src="{% static 'images/aboutus.png' %}" />About As</a>
                     <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/help.png' %}" />Help</a>
 
                 </div>
@@ -49,7 +50,7 @@
                     </script>
 
                     <a href="{% url 'home_app' %}">
-                        <span class="link-lain font25"><img class="youtubeicon" src="{% static 'images/youtube.png' %}" /><strong>YouTube</strong></span>
+                        <span class="link-lain font25"><img class="youtubeicon" src="{% static 'images/youtube.png' %}" /><strong>AlphaTeach</strong></span>
                     </a>
 
                     <dev class ="search">
@@ -70,8 +71,42 @@
         {% block content %}
         {% endblock %}
         <footer>
-            <span class ="footerfont">
-                <strong>Copyright @ YouTube 2019</strong>
-            </span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-12">
+                        <img class="footer-image" src="{% static 'images/logo-alterra-academy-plain.png' %}" />
+                        <h6 class="spanfooter" style="color:white"> &copy; Copyright Alterra Group 2019</h6>
+                    </div>
+                    <div class="col-md-2 col-12">
+                        <h5 style="color:white">Follow Us On</h5>
+                        <table>
+                            <tr>
+                                <td>
+                                    <img class="social-media" src="{% static 'images/ico-facebook.png' %}" />
+                                </td>
+                                <td>
+                                    <span style="color:white">Facebook</span><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img class="social-media" src="{% static 'images/ico-twitter.png' %}" />
+                                </td>
+                                <td>
+                                    <span style="color:white">Twitter</span><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img class="social-media" src="{% static 'images/ico-instagram.png' %}" />
+                                </td>
+                                <td>
+                                    <span style="color:white">Instagram</span><br>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </footer>
 </html>
