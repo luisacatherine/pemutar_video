@@ -2,4 +2,33 @@
 {% load static %}
 
 {% block content %}
+
+<div class="section-product"> 
+    <div class="container-fluid">
+        <p class="section-header">Welcome, {% if user.is_authenticated %}{{ user.username }}{% else %}visitor{% endif %}! </p>
+        <div class="row">
+            {% for data in videos %}
+            <div class="col-md-2 col-sm-4 col-6">
+                <div class="produknya">
+                    <div class="column-product">
+                        <div class="column-middle">
+                            <div class="video_home">
+                                <video controls>
+                                    <source src='{{ data.videofile.url }}' type='video/mp4'>
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <a class="link-lain" href="{% url 'post_detail' post_id=data.id %}">{{ data.judul|truncatechars:30 }}</a><br>
+                        <a class="link-nama" href="{% url 'profile_umum' username=data.posted_by %}">{{ data.posted_by }} - {{ data.update_at.date }}</a><br>
+                        <a href="{% url 'post_detail' post_id=data.id %}">Lihat Details</a>
+                    </div>
+                </div>  
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>    
 {% endblock %}

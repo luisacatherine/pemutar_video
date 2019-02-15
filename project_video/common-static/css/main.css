@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700');
+
+.navbar {
+    position: fixed!important;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+body, p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto'!important;
+    font-weight: bold;
+}
+.sidenav {
+  height: 100%; 
+  width: 0; 
+  position: fixed;
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: WhiteSmoke ; 
+  overflow-x: hidden; 
+  margin-top: 56px;
+  padding-top: 10px; 
+  transition: 0.75s; 
+}
+.navtop{
+  background-color: WhiteSmoke;
+  padding: 14px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 22px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Open Sans';
+  color:  #19345E;
+  display: block;
+  transition: 0.3s;
+}
+.icon{
+    width: 20px;
+    margin: 5px;
+}
+   
+.sidenav a:hover {
+  color: #F47522;
+}
+  
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+  
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+  
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+footer{
+  background-color: #19345E;
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding-top:2px;
+  width:100%;
+  bottom: 0;
+  position: fixed;
+  z-index:10;
+}
+
+.footerfont{
+    color: white;
+    margin:0 auto;
+    display: table;
+}
+
+.spanfooter{
+    color: white;
+}
+.youtubeicon{
+  width: 35px;
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-bottom: 0px;
+  margin-top: opx;
+}
+.youtube{
+  font-size: 25px;
+}
+
+.aboutus{
+    margin:0 auto;
+    display: table;
+}
+.search{
+  float: right;
+}
+
+#buttonsearch{
+  height: 34px;
+}
+
+.judul-video-home {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.judul-video-detail {
+    font-family: 'Roboto';
+    font-weight: bold;
+    color:#19345E;
+    font-size: 24px;
+}
+
+.judul-video-lain {
+    font-family: 'Roboto';
+    font-weight: bold;
+    color:#19345E;
+    font-size: 16px;
+}
+
+#AboutAlpha{
+    padding-top: 15px;
+    padding-left: 50px;
+}
+
+.h2_author{
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.friends{
+    border-radius: 50%;
+    width: 60%;
+    margin: 0px;
+    margin-top: 50px;
+    margin-left: 75px;
+}
+.learnvideo{
+    margin-top: 75px;
+    margin-right: 200px;
+}
+.friends1{
+    border-radius: 5%;
+    width: 80%;
+    margin: 0px;
+    margin-top: 50px;
+    margin-left: 75px;
+}
+.section-product{
+    padding: 100px 0 150px 0;
+}
+
+.section-list{
+    padding: 20px 0 150px 0;
+}
+
+.produknya{
+    padding: 10px 0;
+}
+
+.section-product .column-product{
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    display: table;
+    margin: auto;
+}
+iframe{
+    margin:0 auto;
+    display: table;
+    height: 500px;
+    width: 1000px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+.section-product .column-product .column-middle {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.video_home video {
+    min-width: 100px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+.video_list video {
+    min-width: 100px;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+.section-product .column-product .column-middle .video_detail video {
+    min-width: 100px;
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+}
+
+.product-details {
+    padding: 10px;
+    text-align: left;
+}
+
+.nama-produk {
+    font-weight: bold;
+}
+
+.link-lain{
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 14px;
+    color: #19345E;
+    text-decoration: None;
+}
+
+.link-nama{
+    font-family: 'Open Sans';
+    font-size: 14px;
+    color: gray;
+}
+
+.link-nama:hover{
+    color:gray
+}
+
+.font25{
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.link-lain:hover {
+    color: #F47522;
+    text-decoration: None;
+}
+
+.font25:hover {
+    color: #19345E;
+    text-decoration: none!important;
+}
+
+.section-header {
+    font-family: Roboto;
+    font-weight: bold;
+    color: #19345E;
+    font-size: 20pt;
+    text-align: center;
+}
+
+.section-sub {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 16pt;
+    text-align: center;
+    padding-top: 100px;
+}
+
+hr {
+    border: 10px;
+    clear:both;
+    display:block;
+    width: 80%;               
+    background-color:black;
+    height: 1px;
+  }
+
+.navbar-light .navbar-brand {
+    color:#19345E;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    color: #19345E;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #19345E;
+}
+
+.header{
+    box-shadow: 0 3px 6px RGBA(0,0,0,.16);
+}
+
+.navbar-brand{
+    float: left;
+    height: 50px;
+    padding: 0 10px !important;
+    font-size: 18px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.judul-app{
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: bold;
+    color:  #19345E;
+    text-decoration: None;
+}
+
+.judul-app:hover{
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: bold;
+    color:  #F47522;
+    text-decoration: None;
+}
+
+.med-sos {
+    font-family: 'Open Sans';
+    font-size: 12px;
+    color:#F7F7F7;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.medsos-table {
+    margin: auto;
+    padding: 5px;
+    border-spacing: 50px;
+}
+
+#follow-us {
+    font-family: 'Open Sans';
+    font-size: 17px;
+    color: white;
+    font-weight: 700;
+}

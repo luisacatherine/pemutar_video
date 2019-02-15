@@ -9,7 +9,7 @@ from django.utils import timezone
 
 # Create your models here.
 
-class VideoClass(models.Model):
+class Author(models.Model):
     judul = models.CharField(max_length=100)
     videofile = models.FileField(upload_to='videos', null=True, verbose_name="")
     update_at = models.DateTimeField(auto_now=True)

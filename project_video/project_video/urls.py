@@ -17,11 +17,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf.urls import url
 from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home_app.urls'))
+    path('', include('home_app.urls')),
+    path('', include('signup.urls')),
+    path('', include('about_us.urls')),
+    url(r'^', include('home_app.urls'))
 ]
 
 urlpatterns += staticfiles_urlpatterns()

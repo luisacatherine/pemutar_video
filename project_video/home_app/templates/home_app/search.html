@@ -1,0 +1,36 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<p class="section-header">Your search result(s):</p>
+<div class="section-list">
+    <div class="container">
+        {% for data in videos %}
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-5 col-sm-6 col-6 text-right">
+                <div class="produknya">
+                    <div class="column-product">
+                        <div class="column-middle">
+                            <div class="video_list">
+                                <video controls>
+                                    <source src='{{ data.videofile.url }}' type='video/mp4'>
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-6 col-6">
+                <a class="link-lain" href="{% url 'post_detail' post_id=data.id %}">{{ data.judul|truncatechars:30 }}</a><br>
+                <p>{{ data.deskripsi_video }}</p>
+                <p>{{ data.update_at }}</p>
+            </div>
+            <div class="col-md-1"></div>
+            <hr size="10">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

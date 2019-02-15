@@ -1,0 +1,50 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="section-product"> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-sm-12 col-12">
+                <div class="produknya">
+                    <div class="column-product">
+                        <div class="column-middle">
+                            <div class="video_detail">
+                                <video controls>
+                                    <source src='{{ videos.videofile.url }}' type='video/mp4'>
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-8">
+                            <p class="judul-video-detail">{{ videos.judul }}</p>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-4 text-right">
+                            <p>posted by: <a class="link-nama" href="{% url 'profile_umum' username=videos.posted_by %}">{{ videos.posted_by }}</a> on {{ videos.update_at.date }} </p>
+                            <br>
+                        </div>
+                    </div>
+                    <p>{{ videos.deskripsi_video }}</p>
+                </div> 
+            </div>
+            <div class="col-md-2 col-sm-12 col-12">
+                <p class="judul-video-lain">Lihat Video Lainnya</p>
+                {% for data in video_lain %}
+                <div class="video_home">
+                    <video controls>
+                        <source src='{{ data.videofile.url }}' type='video/mp4'>
+                    </video>
+                    <a class="link-lain" href="{% url 'post_detail' post_id=data.id %}">{{ data.judul }}</a>
+                    <p><a class="link-nama" href="{% url 'profile_umum' username=data.posted_by %}">{{ data.posted_by }}</a> on {{ data.update_at.date }}</p>
+                    <br>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>    
+{% endblock %}
+
