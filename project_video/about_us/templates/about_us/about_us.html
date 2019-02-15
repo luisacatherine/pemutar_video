@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<dev class="aboutus">
+    <div>
+    <h2 class="h2_author">
+        Who is AlphaTeach?
+    </h2>
+    <div class="row">
+        <div id="AboutAlpha" class="col-md-5 lg-5">
+            <p>
+                <strong>AlphaTeach</strong> 
+                is a website that provides videos about learning how to become professional programmers.
+                In this Website you will learn about programming language, such as Python and Javascript, build back-end apps using 
+                Flask framework with microservice concept, build client-site apps using React Library, etc.
+            </p>
+        </div>
+        <div class="col-md-7 lg-7">
+            <img class="friends" src="{% static 'images/code.png' %}" />
+        </div>
+    </div>
+    <div class="row">
+        <div id="AboutAlpha" class="col-md-5 lg-5">
+            <img class="friends1" src="{% static 'images/coding.png' %}" />
+        </div>
+        <div class="col-md-7 lg-7">
+            <p class="learnvideo">
+                <strong>The Videos</strong> 
+                
+Videos created by professional mentors from Alpha Tech Academy. 
+From videos you will learn to be programmer from basic. AlphaTeach 
+gives anyone any chance (not even an IT background) to learn 
+being a professional Tech Talent. What is our mission? We want 
+to improve capability Tech Talent in Indonesia
+            </p>
+
+        </div>
+    </div>
+</dev><br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.3141822078887!2d112.60827644958557!3d-7.96644679423405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7882865ded0697%3A0xa77fa961a7c4e4b7!2sSepulsa+Lodge+Malang!5e0!3m2!1sen!2sid!4v1550020319733" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+{% endblock %}

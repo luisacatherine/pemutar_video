@@ -1,7 +1,6 @@
 {% load static %}
 
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +15,7 @@
 
     <title>Base</title>
 </head>
-
+<body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="navtop">
         <div id="mySidenav" class="sidenav">
@@ -25,6 +24,7 @@
             <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/tranding.png' %}" />Trending</a>
             <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/library.png' %}" />Library</a>
             <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/history.png' %}" />History</a><br>
+  <a href="{% url 'about_us' %}" style="text-decoration:none"><img class="icon" src="{% static 'images/aboutus.png' %}" />About Us</a>
             <a href="#" style="text-decoration:none"><img class="icon" src="{% static 'images/help.png' %}" />Help</a>
         </div>
         <span class="navbuton" style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -34,7 +34,6 @@
                 document.getElementById("main").style.marginLeft = "250px";
                 document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
             }
-
             function closeNav() {
                 document.getElementById("mySidenav").style.width = "0";
                 document.getElementById("main").style.marginLeft = "0";
@@ -72,7 +71,7 @@
                     <a class="dropdown-item" href="{% url 'login' %}" style="text-decoration:none">Log In</a>
                     {% endif %}
                 </div>
-            </li>
+                 </li>
         </ul>
     </div>
     <form class="form-inline my-2 my-lg-0 navbar-form navbar-right" method="GET" action="/search/">
@@ -83,10 +82,44 @@
 </nav>
 {% block content %}
 {% endblock %}
-<footer>
-    <span class="footerfont">
-        <strong>Copyright @ YouTube 2019</strong>
-    </span>
-</footer>
-
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-12">
+                        <img class="footer-image" src="{% static 'images/logo-alterra-academy-plain.png' %}" />
+                        <h6 class="spanfooter" style="color:white"> &copy; Copyright Alterra Group 2019</h6>
+                    </div>
+                    <div class="col-md-2 col-12">
+                        <h5 style="color:white">Follow Us On</h5>
+                        <table>
+                            <tr>
+                                <td>
+                                    <img class="social-media" src="{% static 'images/ico-facebook.png' %}" />
+                                </td>
+                                <td>
+                                    <span style="color:white">Facebook</span><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img class="social-media" src="{% static 'images/ico-twitter.png' %}" />
+                                </td>
+                                <td>
+                                    <span style="color:white">Twitter</span><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img class="social-media" src="{% static 'images/ico-instagram.png' %}" />
+                                </td>
+                                <td>
+                                    <span style="color:white">Instagram</span><br>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </footer>
+  </body>
 </html>
